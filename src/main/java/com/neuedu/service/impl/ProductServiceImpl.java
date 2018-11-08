@@ -267,7 +267,7 @@ public class ProductServiceImpl implements IProductService {
             return ServerResponse.serverResponseByError("商品不存在");
         }
        //step3:检验商品状态
-        if (product.getStatus()==Const.ProductStatusEnum.PRODUCT_ONLINE.getCode()){
+        if (product.getStatus()!=Const.ProductStatusEnum.PRODUCT_ONLINE.getCode()){
             return ServerResponse.serverResponseByError("商品已下架或删除");
         }
        //step4:获取productDetailVO
