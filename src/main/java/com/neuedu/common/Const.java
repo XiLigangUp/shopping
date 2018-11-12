@@ -3,6 +3,7 @@ package com.neuedu.common;
 public class Const {
     public static final String CURRENTUSER="current_user";
 
+    public static final String TRADE_SUCCESS="TRADE_SUCCESS";
 
     public  enum ResponseCodeEnum{
         NEED_LOGIN(2,"需要登录"),
@@ -213,6 +214,41 @@ public class Const {
         }
 
     }
+
+
+    public  enum PaymentPlatformEnum{
+
+        ALIPAY(1,"支付宝")
+        ;
+
+        private int code;
+        private String desc;
+        private PaymentPlatformEnum(int code,String desc){
+            this.code=code;
+            this.desc=desc;
+        }
+
+
+
+
+        public int getCode() {
+            return code;
+        }
+
+        public void setCode(int code) {
+            this.code = code;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+        public void setDesc(String desc) {
+            this.desc = desc;
+        }
+
+    }
+
 
 
 

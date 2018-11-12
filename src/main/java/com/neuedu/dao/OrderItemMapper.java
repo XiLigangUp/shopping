@@ -47,4 +47,11 @@ public interface OrderItemMapper {
      * 订单明细批量插入
      * */
     int insertBatch(List<OrderItem> orderItemList);
+
+    /**
+     * 根据订单号查询订单明细
+     * */
+    List<OrderItem> findOrderItemByOrderNo(Long orderNo);
+
+
 }
